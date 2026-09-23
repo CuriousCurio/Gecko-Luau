@@ -64,7 +64,7 @@ Class.ClassInstance = ClassInstance;
 
 Class.EMPTY = table.freeze({__type = false, __newindex = false});
 
-function Class:Search(obj)
+function Class:Search(obj) --simply searches a class
 	for class in pairs(self.Classes) do
 		local class_obj = class:Search(obj);
 		if (class_obj) then return class_obj; end
