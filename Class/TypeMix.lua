@@ -1,4 +1,6 @@
 --!nocheck
+
+-- "__type" is a custom metatable index
 local typeof = function(a)
 	local meta = getmetatable(a);
 	if type(meta) ~= "table" or meta.__type == nil then return typeof(a); end
