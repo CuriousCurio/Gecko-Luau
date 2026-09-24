@@ -26,9 +26,9 @@ local CONVERT = {
 	["userdata"] = function(v) return typeof(v) end,
 	["table"] = function(v) if (DECODE[v]) then return DECODE[v]; end end
 }
-local function EncodeType(v) -- Encodes the type into a  table, function, or string
-	local fx = CONVERT[type(v)];
-	if (fx) then return fx(v) or v; end
+local function EncodeType(v) -- encodes the type into a  table, function, or string
+	local fx = CONVERT[type(v)]; -- checks if the type is in DECODE
+	if (fx) then return fx(v) or v; end -- if there is a function in DECODE it will returnnthe type
 	return v;
 end
 
