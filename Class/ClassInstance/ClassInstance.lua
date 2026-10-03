@@ -1,4 +1,4 @@
-local typeof = require(script.parent.parent.typeof)
+local typeof = require(script.Parent.Parent.typeof)
 
 local P__private = require(script.Parent.__private.__private);
 local Struct = P__private.Struct;
