@@ -1,7 +1,7 @@
 --!nocheck
 
 -- "__type" is a custom metatable index
-local typeof = require(script.parent.typeof)
+local typeof = require(script.Parent.typeof)
 
 local DECODE = {
 	[Axes] = "Axes", [BrickColor] = "BrickColor", [CatalogSearchParams] = "CatalogSearchParams",
