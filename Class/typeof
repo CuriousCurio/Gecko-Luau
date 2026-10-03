@@ -1,4 +1,5 @@
---makes it easier to get the string or strings from s variable
+-- makes it easier to get the string or strings from variable
+-- best to use when replacing the typeof operator
 
 return function(a)
 	local meta = getmetatable(a);
