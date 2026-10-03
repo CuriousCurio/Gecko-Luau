@@ -1,6 +1,6 @@
 local StructRaw = require(script.Parent.StructRaw);
 local TypeMix = require(script.Parent.Parent.TypeMix);
-local typeof = return(script.parent.parent.typeof)
+local typeof = require(script.parent.parent.typeof)
 
 
 
