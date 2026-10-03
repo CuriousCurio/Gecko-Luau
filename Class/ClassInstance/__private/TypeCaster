@@ -1,11 +1,6 @@
 -- Handles type setter and getter data, based on the __type table of __struct
 
-local typeof = function(a)
-	local meta = getmetatable(a);
-	if type(meta) ~= "table" or meta.__type == nil then return typeof(a); end
-	if type(meta.__type) == "function" then return meta.__type(a); end
-	return meta.__type;
-end
+local typeof = local typeof = require(script.Parent.Parent.typeof)
 
 local function GetInfo(__type, from, to) -- Returns typeof(to), typeof(from)
 	local to_str, to_type = tostring(to), typeof(to);
