@@ -5,12 +5,8 @@ local VirtualConnector = require(script.Parent.VirtualConnector);
 local RBXMaid = require(script.Parent.Parent.Parent.RBXMaid);
 local Struct = require(script.Parent.Parent.Parent.Struct.Struct);
 
-local typeof = function(a)
-	local meta = getmetatable(a);
-	if type(meta) ~= "table" or meta.__type == nil then return typeof(a); end
-	if type(meta.__type) == "function" then return meta.__type(a); end
-	return meta.__type;
-end
+local typeof = require(script.Parent.Parent.typeof)
+
 local pcall = function(a, ...)
 	local s,e = pcall(a, ...);
 	if (s == true) then return s,e; end
