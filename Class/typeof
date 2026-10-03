@@ -1,3 +1,5 @@
+--makes it easier to get the string or strings from s variable
+
 return function(a)
 	local meta = getmetatable(a);
 	if type(meta) ~= "table" or meta.__type == nil then return typeof(a); end
