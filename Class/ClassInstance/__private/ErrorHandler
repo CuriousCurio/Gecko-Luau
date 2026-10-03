@@ -1,5 +1,5 @@
 -- This module creates a smart index error, when a property is missing it will give detailed information about it
-local typeof = require(script.parent.parent.parent.typeof)
+local typeof = require(script.Parent.parent.parent.typeof)
 
 
 local ErrorHandler = {};
