@@ -1,9 +1,4 @@
-local typeof = function(a)
-	local meta = getmetatable(a);
-	if type(meta) ~= "table" or meta.__type == nil then return typeof(a); end
-	if type(meta.__type) == "function" then return meta.__type(a); end
-	return meta.__type;
-end
+local typeof = require(script.parent.parent.typeof)
 
 local P__private = require(script.Parent.__private.__private);
 local Struct = P__private.Struct;
