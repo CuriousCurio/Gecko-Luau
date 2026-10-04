@@ -68,7 +68,7 @@ local Struct = {
 	},
 	__metatable = table.freeze({__type = "Struct"})
 }
-setmetatable(Struct, SructRaw);
+setmetatable(Struct.__index, SructRaw);
 
 Struct.TypeMix = TypeMix;
 
