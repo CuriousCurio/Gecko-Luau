@@ -4,7 +4,7 @@ local typeof = require(script.Parent.Parent.typeof)
 
 
 
-local Struct = setmetatable({
+local Struct = {
    TypeMix = TypeMix,
 
 	__index = {
@@ -69,7 +69,8 @@ local Struct = setmetatable({
 		iterate__virtual = function(self)return pairs(self.__virtual); end
 	},
 	__metatable = table.freeze({__type = "Struct"})
-}, StructRaw)
+}
+setmetatable(Struct, SructRaw);
 
 function Struct.new(table)
 	local self = setmetatable({}, Struct);
