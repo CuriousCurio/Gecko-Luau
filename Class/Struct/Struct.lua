@@ -73,7 +73,14 @@ setmetatable(Struct.__index, SructRaw);
 Struct.TypeMix = TypeMix;
 
 function Struct.new(table)
-	local self = setmetatable({}, Struct);
+	local self = setmetatable({ -- the first is just a normal table with __
+__ = 			{}, -- Default Properties
+__type = 		{}, -- Property types
+__index = 		{}, -- Property getters
+__newindex = 	{}, -- Property setters;
+__virtual = 	{} -- Virtual Properties
+
+}, Struct);
 	self.__ = 			{}; -- Default Properties
 	self.__type = 		{}; -- Property types
 	self.__index = 		{}; -- Property getters
