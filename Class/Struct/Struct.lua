@@ -82,7 +82,7 @@ function Struct.new(table)
 
 
 	if (typeof(table) == "Struct") then
-		self:Insert(table);
+		self:Insert(table);  -- after __index is inserted
 	elseif (typeof(table) == "table") then
 		self:sort(table);
 	end
