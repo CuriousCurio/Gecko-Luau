@@ -81,12 +81,6 @@ __newindex = 	{}, -- Property setters;
 __virtual = 	{} -- Virtual Properties
 
 }, Struct);
-	self.__ = 			{}; -- Default Properties
-	self.__type = 		{}; -- Property types
-	self.__index = 		{}; -- Property getters
-	self.__newindex = 	{}; -- Property setters;
-	self.__virtual = 	{}; -- Virtual Properties
-
 
 	if (typeof(table) == "Struct") then
 		self:Insert(table);  -- after __index is inserted
