@@ -1,5 +1,4 @@
 -- Handles type setter and getter data, based on the __type table of __struct
-
 local typeof = local typeof = require(script.Parent.Parent.typeof)
 
 local function GetInfo(__type, from, to) -- Returns typeof(to), typeof(from)
