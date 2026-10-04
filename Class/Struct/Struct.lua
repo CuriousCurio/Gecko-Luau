@@ -14,6 +14,12 @@ local Struct = {
 					if (__[att_i] ~= nil) then continue; end -- If there's already a value
 					__[att_i] = att_v[i];
 				end
+    self:set__(i, __.__);
+    self:set__type(i, __.__type)
+    self:set__index(i, __.__index)
+    self:set__newindex(i, __.__newindex)
+    self:set__virtual(i, __.__virtual)
+   
 			end
 		end,
 		remove = function(self, i) -- Removes a property
