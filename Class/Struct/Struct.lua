@@ -5,6 +5,8 @@ local typeof = require(script.Parent.Parent.typeof)
 
 
 local Struct = setmetatable({
+ TypeMix = TypeMix;
+
 	__index = {
 		sort = function(self, table)  -- Sorts the table into seperate property attribute containers: (__type, __, ...)
 			if (table ~= nil and type(table) ~= "table") then error(string.format("invalid argument #%i to \"%s\" (%s expected, got %s)", 1, "Class.new", "table", typeof(table))); end
@@ -69,8 +71,6 @@ local Struct = setmetatable({
 	__metatable = table.freeze({__type = "Struct"})
 }, StructRaw)
 
-
-Struct.TypeMix = TypeMix;
 function Struct.new(table)
 	local self = setmetatable({}, Struct);
 	self.__ = 			{}; -- Default Properties
