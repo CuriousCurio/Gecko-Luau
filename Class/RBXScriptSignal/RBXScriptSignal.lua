@@ -46,7 +46,6 @@ local RBXScriptSignal = {
 
 
 function RBXScriptSignal.new() -- If a table is used, it will be
-	local self = setmetatable({}, RBXScriptSignal);
-	return self;
+	 return setmetatable({}, RBXScriptSignal);
 end
 return RBXScriptSignal;
