@@ -34,8 +34,7 @@ Maid.__index = {
 }
 
 function Maid.new()
-	local self = setmetatable({}, Maid);
-	return self;
+	return setmetatable({}, Maid);
 end
 Maid.__index.new = Maid.new;
 
