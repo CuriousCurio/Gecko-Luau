@@ -16,7 +16,7 @@ end
 
 local __private = {};
 function __private.new(__class, __public)
-	return setmetatable({
+	local self = setmetatable({
 		__class = __class,
 		__public = __public,
 		__struct = Struct.new(),
@@ -26,6 +26,8 @@ function __private.new(__class, __public)
 		__bin = RBXMaid.new(),			-- Instances
 		__cxn = RBXMaid.new(),			-- RBXScriptConnection & _RBXScriptSignal
 	}, __private);
+
+return self;
 end
 __private.Struct = Struct;
 
