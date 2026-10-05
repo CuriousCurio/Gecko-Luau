@@ -34,9 +34,9 @@ __index = {
 }
 }
 
-function Maid.__metatable.new()
+function Maid__metatable.new()
 	return setmetatable({}, Maid__metatable);
 end
-Maid.__index.new = Maid.new;
+Maid__metatable.__index.new = Maid__metatable.new;
 
-return Maid;
+return Maid__metatable;
