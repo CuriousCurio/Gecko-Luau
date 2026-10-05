@@ -41,7 +41,7 @@ local Enum__eq = function(a, b) -- Checks two values if enum are equal
 end
 
 
-local TypeMix = {
+local TypeMix__metatable = {
 	__index = {
 		Include = function(self, v)
 			rawset(self, EncodeType(v), true);
@@ -119,9 +119,9 @@ local TypeMix = {
 	__metatable = table.freeze({__type = "TypeMix"})
 };
 
-function TypeMix.new(table:{})
-	local self = setmetatable({}, TypeMix);
+function TypeMix__metatable.new(table:{})
+	local self = setmetatable({}, TypeMix__metatable);
 	if (table) then self:IncludeTuple(table); end
 	return self;
 end
-return TypeMix;
+return TypeMix__metatable;
