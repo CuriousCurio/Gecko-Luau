@@ -14,25 +14,7 @@ local pcall = function(a, ...)
 end
 
 
-local __private = {};
-function __private.new(__class, __public)
-	local self = setmetatable({}, __private);
-     setmetatable(self, {
-		__class = __class,
-		__public = __public,
-		__struct = Struct.new(),
-		
-		__virtual = nil, -- Virtual connector (Connects all virtual properties)
-		__changed = RBXMaid.new(),  -- Specific property changed connectors (_RBXScriptSignal)
-		__bin = RBXMaid.new(),			-- Instances
-		__cxn = RBXMaid.new(),			-- RBXScriptConnection & _RBXScriptSignal
-	})
-
-return self;
-end
-__private.Struct = Struct;
-
-__private.__index = {
+local __private = {__index = {
 	__superroot = function(self) -- Gets the deepsest __subroot value (can be Instance/ClassInstance)
 		local __super__private = self:__super__private();
 		if (__super__private) then return __super__private:__superroot(); end
@@ -473,5 +455,24 @@ __private.__index = {
 		return __newindex;
 	end
 };
+
+function __private.new(__class, __public)
+	local self = setmetatable({}, __private);
+     setmetatable(self, {
+		__class = __class,
+		__public = __public,
+		__struct = Struct.new(),
+		
+		__virtual = nil, -- Virtual connector (Connects all virtual properties)
+		__changed = RBXMaid.new(),  -- Specific property changed connectors (_RBXScriptSignal)
+		__bin = RBXMaid.new(),			-- Instances
+		__cxn = RBXMaid.new(),			-- RBXScriptConnection & _RBXScriptSignal
+	}};
+
+__private.Struct = Struct;
+
+return self;
+end
+
 
 return __private;
