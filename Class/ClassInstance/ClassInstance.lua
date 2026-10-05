@@ -34,7 +34,7 @@ local ClassInstance = {
 ClassInstance.Struct = Struct;
 function ClassInstance.new(class, ...) -- the class variable is the same as the ClassInstance metatable table
 	local self = setmetatable({}, ClassInstance);
-	local __private = P__private.new(class, self);
+	local __private = P__private.new(class, self); --__class, __public in the __private file
 	rawset(self, "__private", __private);
 
 	-- Inserting Initial Libraries --
