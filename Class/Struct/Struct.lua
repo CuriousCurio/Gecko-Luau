@@ -4,7 +4,7 @@ local typeof = require(script.Parent.Parent.typeof)
 
 
 
-local Struct = {
+local Struct__metatable = {
 	__index = {
 		sort = function(self, table)  -- Sorts the table into seperate property attribute containers: (__type, __, ...)
 			if (table ~= nil and type(table) ~= "table") then error(string.format("invalid argument #%i to \"%s\" (%s expected, got %s)", 1, "Class.new", "table", typeof(table))); end
@@ -68,11 +68,11 @@ local Struct = {
 	},
 	__metatable = table.freeze({__type = "Struct"})
 }
-setmetatable(Struct.__index, SructRaw);
+setmetatable(Struct__metatable.__index, SructRaw);
 
-Struct.TypeMix = TypeMix;
+Struct__metatable.TypeMix = TypeMix;
 
-function Struct.new(table)
+function Struct__metatable.new(table)
 	local self = setmetatable({ -- the first is just a normal table with __
 __ = 			{}, -- Default Properties
 __type = 		{}, -- Property types
@@ -80,7 +80,7 @@ __index = 		{}, -- Property getters
 __newindex = 	{}, -- Property setters;
 __virtual = 	{} -- Virtual Properties
 
-}, Struct);
+}, Struct__metatable);
 
 	if (typeof(table) == "Struct") then
 		self:Insert(table);  -- after __index is inserted
@@ -90,4 +90,4 @@ __virtual = 	{} -- Virtual Properties
 
 	return self;
 end
-return Struct;
+return Struct__metatable;
