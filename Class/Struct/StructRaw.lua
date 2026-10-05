@@ -98,9 +98,6 @@ local StructRaw = {
 
 
 function StructRaw.new()
-	local self = setmetatable({
-		__ = {} -- Default Properties
-	}, StructRaw);
-	return self;
+	return setmetatable({__ = {}}, StructRaw);
 end
 return StructRaw;
