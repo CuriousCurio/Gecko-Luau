@@ -89,7 +89,7 @@ function Class__metatable.new(table:{})
 	local __static = self.__struct:get__('__static');
 	if (__static) then __static(self); self.__struct:set__('__static', nil); end
 
-	Class.Classes[self] = true;
+	Class__metatable.Classes[self] = true;
 
 	return self;
 end
