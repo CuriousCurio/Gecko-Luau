@@ -32,7 +32,7 @@ local ClassInstance = {
 };
 
 ClassInstance.Struct = Struct;
-function ClassInstance.new(class, ...)
+function ClassInstance.new(class, ...) -- the class variable is the same as the ClassInstance metatable table
 	local self = setmetatable({}, ClassInstance);
 	local __private = P__private.new(class, self);
 	rawset(self, "__private", __private);
