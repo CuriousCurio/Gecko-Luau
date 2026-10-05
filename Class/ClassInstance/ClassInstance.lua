@@ -6,7 +6,7 @@ local Struct = P__private.Struct;
 local P__struct = Struct.new(require(script.Parent.__struct));
 
 
-local ClassInstance = {
+local ClassInstance__metatable = {
 	__index = function(self, i)
 		local __private = self.__private;
 		local f = getmetatable(__private).__index[i];
@@ -30,10 +30,10 @@ local ClassInstance = {
 	end,
 	__metatable = table.freeze({__type = "ClassInstance"})
 };
+ClassInstance__metatable.Struct = Struct;
 
-ClassInstance.Struct = Struct;
-function ClassInstance.new(class, ...) -- the class variable is the same as the ClassInstance metatable table
-	local self = setmetatable({}, ClassInstance);
+function ClassInstance__metatable.new(class, ...) -- the class variable is the same as the ClassInstance metatable table
+	local self = setmetatable({}, ClassInstance__metatable);
 	local __private = P__private.new(class, self); --(__class, __public) in the __private file
 	rawset(self, "__private", __private);
 
@@ -57,4 +57,4 @@ function ClassInstance.new(class, ...) -- the class variable is the same as the 
 
 	return self;
 end
-return ClassInstance;
+return ClassInstance__metatable;
