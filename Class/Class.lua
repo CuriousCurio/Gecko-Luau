@@ -4,7 +4,7 @@ local RBXScriptSignal = require(script.Parent.RBXScriptSignal.RBXScriptSignal);
 
 
 local __index;
-local Class = {
+local Class__metatable = {
 	__index = function(self, i) -- [self, PUBLIC, __struct]
 		local v = __index[i];
 		if (v ~= nil) then return v; end
@@ -58,32 +58,32 @@ __index = {
 };
 
 
-Class.Classes = {};
-Class.Struct = ClassInstance.Struct;
-Class.ClassInstance = ClassInstance;
+Class__metatable.Classes = {};
+Class__metatable.Struct = ClassInstance.Struct;
+Class__metatable.ClassInstance = ClassInstance;
 
-Class.EMPTY = table.freeze({__type = false, __newindex = false});
+Class__metatable.EMPTY = table.freeze({__type = false, __newindex = false});
 
-function Class:Search(obj) --simply searches a class
+function Class__metatable:Search(obj) --simply searches a class
 	for class in pairs(self.Classes) do
 		local class_obj = class:Search(obj);
 		if (class_obj) then return class_obj; end
 	end
 end
-function Class:Find(classname)
+function Class__metatable:Find(classname)
 	for class in pairs(self.Classes) do
 		if (class.__.ClassName == classname) then return class; end
 	end
 end
 
-function Class.new(table:{})
+function Class__metatable.new(table:{})
 	local self = setmetatable({
 		Instances = {},
 		Added = RBXScriptSignal.new(),			-- An instance is added
 		Removing = RBXScriptSignal.new(),		-- An instance is being removed
 		Destroying = RBXScriptSignal.new(),		-- This Class is being destroyed
 
-		__struct = Class.Struct.new(table)
+		__struct = Class__metatable.Struct.new(table)
 	}, Class);
 
 	local __static = self.__struct:get__('__static');
@@ -93,4 +93,4 @@ function Class.new(table:{})
 
 	return self;
 end
-return Class;
+return Class__metatable;
