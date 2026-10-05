@@ -29,7 +29,7 @@ local function GetExistingPropertyIndicies(self, tb) -- Finds all property indic
 	return sorted;
 end
 
-local StructRaw = {
+local StructRaw__metatable = {
 	__index = {
 		Insert = function(self, StructRaw) -- Inserts all values into this struct
 			for att_i,att_v:{} in pairs(StructRaw) do
@@ -97,7 +97,7 @@ local StructRaw = {
 };
 
 
-function StructRaw.new()
-	return setmetatable({__ = {}}, StructRaw);
+function StructRaw__metatable.new()
+	return setmetatable({__ = {}}, StructRaw__metatable);
 end
-return StructRaw;
+return StructRaw__metatable;
