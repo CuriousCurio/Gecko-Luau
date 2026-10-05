@@ -1,6 +1,8 @@
 -- makes it easier to get the string or strings from variable
 -- best to use when replacing the typeof operator
 
+-- it will return the metatable value "__type" if there is a metatable
+
 return function(a)
 	local meta = getmetatable(a);
 	if type(meta) ~= "table" or meta.__type == nil then return typeof(a); end
