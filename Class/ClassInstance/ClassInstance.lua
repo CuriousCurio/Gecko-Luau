@@ -4,7 +4,7 @@ local P__private = require(script.Parent.__private.__private);
 local Struct = P__private.Struct;
 
 local P__struct = Struct.new(require(script.Parent.__struct));
-ClassInstance.Struct = Struct;
+
 
 local ClassInstance = {
 	__index = function(self, i)
@@ -31,7 +31,7 @@ local ClassInstance = {
 	__metatable = table.freeze({__type = "ClassInstance"})
 };
 
-
+ClassInstance.Struct = Struct;
 function ClassInstance.new(class, ...)
 	local self = setmetatable({}, ClassInstance);
 	local __private = P__private.new(class, self);
