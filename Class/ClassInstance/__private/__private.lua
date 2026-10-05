@@ -14,7 +14,7 @@ local pcall = function(a, ...)
 end
 
 
-local __private = {__index = {
+local __private__metatable = {__index = {
 	__superroot = function(self) -- Gets the deepsest __subroot value (can be Instance/ClassInstance)
 		local __super__private = self:__super__private();
 		if (__super__private) then return __super__private:__superroot(); end
@@ -456,7 +456,7 @@ local __private = {__index = {
 	end
 };
 
-function __private.new(__class, __public)
+function __private__metatable.new(__class, __public)
 	local self = setmetatable({}, __private);
      setmetatable(self, {
 		__class = __class,
@@ -469,10 +469,10 @@ function __private.new(__class, __public)
 		__cxn = RBXMaid.new(),			-- RBXScriptConnection & _RBXScriptSignal
 	}};
 
-__private.Struct = Struct;
+__private__metatable.Struct = Struct;
 
 return self;
 end
 
 
-return __private;
+return __private__metatable
