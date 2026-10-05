@@ -17,7 +17,7 @@ end
 local __private = {};
 function __private.new(__class, __public)
 	local self = setmetatable({}, __private);
-setmetatable(self, {
+     setmetatable(self, {
 		__class = __class,
 		__public = __public,
 		__struct = Struct.new(),
