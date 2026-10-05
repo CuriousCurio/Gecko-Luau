@@ -27,14 +27,15 @@ end
 
 
 
-local Maid = {};
-Maid.__index = {
+local Maid__metatable = {
+__index = {
 	Destroy = DestroyAll,
 	Disconnect = DisconnectAll
 }
+}
 
-function Maid.new()
-	return setmetatable({}, Maid);
+function Maid.__metatable.new()
+	return setmetatable({}, Maid__metatable);
 end
 Maid.__index.new = Maid.new;
 
