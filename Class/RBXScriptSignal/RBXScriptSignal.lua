@@ -1,4 +1,5 @@
 local RBXScriptConnection = require(script.Parent.RBXScriptConnection);
+
 local RBXScriptSignal__metatable = {
 	__index = {
 		Disconnect = function(self)
