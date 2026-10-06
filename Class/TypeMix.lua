@@ -121,7 +121,7 @@ local TypeMix__metatable = {
 
 function TypeMix__metatable.new(table:{})
 	local self = setmetatable({}, TypeMix__metatable);
-	if (table) then self:IncludeTuple(table); end
+	if (table) then self:IncludeTuple(table); end -- Is part of the TypeMix__metatable but in self
 	return self;
 end
 return TypeMix__metatable;
