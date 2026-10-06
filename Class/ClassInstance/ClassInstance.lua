@@ -1,9 +1,8 @@
 local typeof = require(script.Parent.Parent.typeof)
 
+local P__struct = Struct.new(require(script.Parent.__struct));
 local P__private = require(script.Parent.__private.__private);
 local Struct = P__private.Struct;
-
-local P__struct = Struct.new(require(script.Parent.__struct));
 
 
 local ClassInstance__metatable = {
