@@ -1,8 +1,9 @@
 --!nocheck
 -- This module connects to instance properties using RBXScriptSignal, each property can be locked
 
-local VirtualConnector__metatable = {};
-VirtualConnector__metatable.__index = {
+local VirtualConnector__metatable = {
+
+__index = {
 	Connect = function(self, i, instance:nil)
 		local cxn:{} = self.cxn;
 		local raw:{} = self.raw;
@@ -42,7 +43,8 @@ VirtualConnector__metatable.__index = {
 	Unlock = function(self, i)
 		self.raw[i] = nil;
 	end
-};
+}
+}
 
 function VirtualConnector__metatable.new(invoke:(any))
 	return setmetatable({
