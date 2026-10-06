@@ -22,4 +22,4 @@ function RBXScriptConnection__metatable.new(Connector:(any), Disconnect:(any))
 	}, RBXScriptConnection);
 	return self;
 end
-return RBXScriptConnection;
+return RBXScriptConnection__metatable ;
