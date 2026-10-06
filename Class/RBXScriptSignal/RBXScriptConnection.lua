@@ -1,4 +1,4 @@
-
+-- the RBXScriptSignal.new
 -- This module is only used for the RBXScriptSignal module
 
 local typeof = require(script.parent.parent.typeof)
