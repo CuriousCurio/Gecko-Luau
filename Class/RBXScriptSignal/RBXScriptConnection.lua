@@ -9,7 +9,7 @@ local RBXScriptConnection__metatable = {
 		return self.Connector(...);
 	end,
 	__tostring = function(self)
-		return getmetatable(self).__type .. (self.Connected and "+" or "-");
+		return typeof(self) .. (self.Connected and "+" or "-");
 	end,
 	__metatable = table.freeze({__type = "RBXScriptConnection"})
 };
