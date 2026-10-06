@@ -1,5 +1,5 @@
--- A simple object that requires a connector which can be anything abd a disconnector which can be anything
--- This module is used for the RBXScriptSignal module
+
+-- This module is only used for the RBXScriptSignal module
 
 local typeof = require(script.parent.parent.typeof)
 
