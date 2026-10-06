@@ -1,3 +1,4 @@
+-- This module uses a table and provides a lot of functions that only affects a itself
 --!nocheck
 
 -- "__type" is a custom metatable index
