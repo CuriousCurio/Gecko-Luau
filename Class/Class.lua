@@ -1,3 +1,6 @@
+--Creates a class with a lot of functions
+--Each class created is stored in .Classes
+
 --!nocheck
 local ClassInstance = require(script.Parent.ClassInstance.ClassInstance);
 local RBXScriptSignal = require(script.Parent.RBXScriptSignal.RBXScriptSignal);
