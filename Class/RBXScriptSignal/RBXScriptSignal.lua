@@ -1,5 +1,5 @@
 -- Used for the Class module,  
--- This module also uses the RBXScriptConnection script
+-- This module uses the RBXScriptConnection script
 
 local RBXScriptConnection = require(script.Parent.RBXScriptConnection);
 
