@@ -3,7 +3,7 @@
 -- "__type" is a custom metatable index
 local typeof = require(script.Parent.typeof)
 
-local DECODE = {
+local DECODE = { -- Contains all Roblox typeof strings
 	[Axes] = "Axes", [BrickColor] = "BrickColor", [CatalogSearchParams] = "CatalogSearchParams",
 	[CFrame] = "CFrame", [Color3] = "Color3", [ColorSequence] = "ColorSequence",
 	[ColorSequenceKeypoint] = "ColorSequenceKeypoint", [DateTime] = "DateTime",
