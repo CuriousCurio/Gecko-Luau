@@ -18,7 +18,7 @@ local DECODE = { -- Contains all Roblox typeof strings
 local CONVERT = {
 	["nil"] = function()return "nil"; end,
 	["number"] = function()return "number"; end,
-	["userdata"] = function(v) return typeof(v) end,
+	["userdata"] = function(v) return typeof(v) end, --type({__metatable}) = "userdata"
 	["table"] = function(v) if (DECODE[v]) then return DECODE[v]; end end
 }
 local function EncodeType(v) -- returns the type if in CONVERT or DECODE,  if a userdata is inserted then it will use {__metatable = {__type = ""}}
