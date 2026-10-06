@@ -1,6 +1,8 @@
 -- A simple object that requires a connector which can be anything abd a disconnector which can be anything
 -- Used for the RBXScriptSignal module
 
+local typeof = require(script.parent.parent.typeof)
+
 local RBXScriptConnection__metatable = {
 	__newindex = function(self)end,
 	__call = function(self, ...)
