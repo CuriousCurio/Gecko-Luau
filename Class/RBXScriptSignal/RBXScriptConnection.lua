@@ -1,4 +1,4 @@
-local RBXScriptConnection = {
+local RBXScriptConnection__metatable = {
 	__newindex = function(self)end,
 	__call = function(self, ...)
 		return self.Connector(...);
@@ -11,7 +11,7 @@ local RBXScriptConnection = {
 
 
 
-function RBXScriptConnection.new(Connector:(any), Disconnect:(any))
+function RBXScriptConnection__metatable.new(Connector:(any), Disconnect:(any))
 	local self = setmetatable({
 		Connected = true,
 		Disconnect = function(self)
