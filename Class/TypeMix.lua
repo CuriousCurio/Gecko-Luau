@@ -23,7 +23,7 @@ local CONVERT = {
 }
 local function EncodeType(v) -- encodes the type into a  string or table, function
 	local fx = CONVERT[type(v)]; -- checks if the type is in DECODE
-	if (fx) then return fx(v) or v; end -- if there is a function in DECODE it will returnn the type
+	if (fx) then return fx(v) or v; end -- if fx then it will use the function provided in DECODE
 	return v;
 end
 
