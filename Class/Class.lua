@@ -82,7 +82,7 @@ function Class__metatable.new(table:{})
 		Added = RBXScriptSignal.new(),			-- An instance is added
 		Removing = RBXScriptSignal.new(),		-- An instance is being removed
 		Destroying = RBXScriptSignal.new(),		-- This Class is being destroyed
-__struct = Class__metatabl.Struct.new(table)
+__struct = Class__metatable.Struct.new(table)
 	}, Class__metatable);
 
 	local __static = self.__struct:get__('__static');
