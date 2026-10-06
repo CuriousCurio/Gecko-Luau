@@ -6,6 +6,7 @@ local typeof = require(script.Parent.Parent.typeof)
 
 
 
+
 local Struct__metatable = {
 	__index = {
 		sort = function(self, table)  -- Sorts the table into seperate property attribute containers: (__type, __, ...)
