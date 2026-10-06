@@ -23,7 +23,7 @@ local CONVERT = {
 }
 local function EncodeType(v) -- returns the type if in CONVERT or DECODE,  if a userdata is inserted then it will use {__metatable = {__type = ""}}
 	local fx = CONVERT[type(v)];
-	if (fx) then return fx(v) or v; end -- if fx then it will use the function provided in DECODE
+	if (fx) then return fx(v) or v; end -- if fx then it will use the function provided in CONVERT
 	return v;
 end
 
