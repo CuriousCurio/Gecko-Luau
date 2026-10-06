@@ -1,3 +1,6 @@
+--Used for the Class file,  
+-- Uses the RBXScriptConnection script
+
 local RBXScriptConnection = require(script.Parent.RBXScriptConnection);
 
 local RBXScriptSignal__metatable = {
