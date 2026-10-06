@@ -1,5 +1,6 @@
 -- gives a ton of functions built into a struct table returned by returned script.new
--- this module is used by the Class module
+-- This module is only required by the __private module
+-- Other modules use the __private kodule which contains this module
 
 local StructRaw = require(script.Parent.StructRaw);
 local TypeMix = require(script.Parent.Parent.TypeMix);
