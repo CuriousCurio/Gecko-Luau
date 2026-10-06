@@ -70,7 +70,7 @@ local Struct__metatable = {
 	},
 	__metatable = table.freeze({__type = "Struct"})
 }
-setmetatable(Struct__metatable.__index, SructRaw);
+setmetatable(Struct__metatable.__index, SructRaw); -- all functions in the StructRaw table will be inserted into the __index of this __metatable
 
 Struct__metatable.TypeMix = TypeMix;
 
