@@ -1,5 +1,5 @@
 -- this module goes though tables and does specific actions of the table given
--- this module is only used by the Struct module
+-- this module is only required by the Struct module
 
 local function GetExistingPropertyIndicies(self, tb) -- Finds all property indicies in the table given
 	local properties = {};
