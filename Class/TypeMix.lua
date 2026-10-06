@@ -21,7 +21,7 @@ local CONVERT = {
 	["userdata"] = function(v) return typeof(v) end,
 	["table"] = function(v) if (DECODE[v]) then return DECODE[v]; end end
 }
-local function EncodeType(v) -- returns the typeof if in CONVERT or DECODE,  if a table is inserted then it will use {__metatable = {__type = ""}}
+local function EncodeType(v) -- returns the type if in CONVERT or DECODE,  if a table is inserted then it will use {__metatable = {__type = ""}}
 	local fx = CONVERT[type(v)];
 	if (fx) then return fx(v) or v; end -- if fx then it will use the function provided in DECODE
 	return v;
