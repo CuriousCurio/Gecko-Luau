@@ -2,6 +2,7 @@
 local typeof = require(script.Parent.parent.parent.typeof)
 
 
+
 local ErrorHandler = {};
 function ErrorHandler:Index(obj, i)
 	local __:{};
