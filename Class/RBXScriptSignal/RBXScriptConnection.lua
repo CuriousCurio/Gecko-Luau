@@ -1,4 +1,4 @@
-A simple object that requires a connector which can be anything abd a disconnector which can be anything
+--A simple object that requires a connector which can be anything abd a disconnector which can be anything
 
 local RBXScriptConnection__metatable = {
 	__newindex = function(self)end,
