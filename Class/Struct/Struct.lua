@@ -1,4 +1,5 @@
 -- gives a ton of functions built into a struct table returned by returned script.new
+-- this module is used by the Class module
 
 local StructRaw = require(script.Parent.StructRaw);
 local TypeMix = require(script.Parent.Parent.TypeMix);
