@@ -1,4 +1,5 @@
 --Creates a class with a lot of functions mainly .ClassInstance
+--if you look further it uses __private functions inserted into ClassInstance
 --Each class created is stored in .Classes
 
 --!nocheck
