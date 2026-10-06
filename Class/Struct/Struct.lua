@@ -70,10 +70,11 @@ local Struct__metatable = {
 		iterate__virtual = function(self)return pairs(self.__virtual); end
 	},
 	__metatable = table.freeze({__type = "Struct"})
+ 
+ TypeMix = TypeMix;
 }
 setmetatable(Struct__metatable.__index, SructRaw); -- all functions in the StructRaw table will be inserted into the __index of this __metatable
 
-Struct__metatable.TypeMix = TypeMix;
 
 function Struct__metatable.new(table)
 	local self = setmetatable({ -- the first is just a normal table with __
