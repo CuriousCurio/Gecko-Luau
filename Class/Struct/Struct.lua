@@ -1,4 +1,4 @@
--- gives a ton of functions built into a struct table returned by .new
+-- gives a ton of functions built into a struct table returned by Struct__metatable.new
 
 local StructRaw = require(script.Parent.StructRaw);
 local TypeMix = require(script.Parent.Parent.TypeMix);
