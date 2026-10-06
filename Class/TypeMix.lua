@@ -46,7 +46,7 @@ local TypeMix__metatable = {
 		Include = function(self, v)
 			rawset(self, EncodeType(v), true);
 		end,
-		IncludeTuple = function(self, table:{}) -- includes a table into another table only if a TypeMix __type used by TypeMix__metatable.new()
+		IncludeTuple = function(self, table:{}) -- includes a table into another table only if a TypeMix __type used by TypeMix__metatable.new().        Combines two tables
 			local ni = 1;
 			while (true) do
 				local v = table[ni];
