@@ -1,4 +1,4 @@
---Creates a class with a lot of functions
+--Creates a class with a lot of functions mainly .ClassInstance
 --Each class created is stored in .Classes
 
 --!nocheck
