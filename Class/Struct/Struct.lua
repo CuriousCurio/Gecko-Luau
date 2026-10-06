@@ -1,3 +1,5 @@
+-- gives a ton of functions built into a struct table returned by .new
+
 local StructRaw = require(script.Parent.StructRaw);
 local TypeMix = require(script.Parent.Parent.TypeMix);
 local typeof = require(script.Parent.Parent.typeof)
