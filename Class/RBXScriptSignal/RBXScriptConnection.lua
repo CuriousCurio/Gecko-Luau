@@ -1,5 +1,5 @@
---A simple object that requires a connector which can be anything abd a disconnector which can be anything
--- Used for the RBXScriptSignal script
+-- A simple object that requires a connector which can be anything abd a disconnector which can be anything
+-- Used for the RBXScriptSignal module
 
 local RBXScriptConnection__metatable = {
 	__newindex = function(self)end,
