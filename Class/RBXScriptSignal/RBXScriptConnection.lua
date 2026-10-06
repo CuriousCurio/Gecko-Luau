@@ -1,4 +1,4 @@
--- the RBXScriptSignal.new
+-- the RBXScriptSignal.new creates a table which holds multiple RBXScriptConnection
 -- This module is only used for the RBXScriptSignal module
 
 local typeof = require(script.parent.parent.typeof)
