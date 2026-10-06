@@ -19,7 +19,7 @@ function RBXScriptConnection__metatable.new(Connector:(any), Disconnect:(any))
 			Disconnect(self);
 		end,
 		Connector = Connector
-	}, RBXScriptConnection);
+	}, RBXScriptConnection__metatable);
 	return self;
 end
-return RBXScriptConnection__metatable ;
+return RBXScriptConnection__metatable;
