@@ -1,5 +1,5 @@
 local RBXScriptConnection = require(script.Parent.RBXScriptConnection);
-local RBXScriptSignal = {
+local RBXScriptSignal__metatable = {
 	__index = {
 		Disconnect = function(self)
 			for connection in pairs(self) do
@@ -45,7 +45,7 @@ local RBXScriptSignal = {
 };
 
 
-function RBXScriptSignal.new() -- If a table is used, it will be
-	 return setmetatable({}, RBXScriptSignal);
+function RBXScriptSignal__metatable.new() -- If a table is used, it will be
+	 return setmetatable({}, RBXScriptSignal__metatable);
 end
-return RBXScriptSignal;
+return RBXScriptSignal__metatable;
