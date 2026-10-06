@@ -1,4 +1,5 @@
--- This module uses a table and provides a lot of functions that only affects a itself
+-- This module uses a table created and provides a lot of functions that only affects the table
+-- If a table is inserted by the .new function, it will put all indicies into the table created
 --!nocheck
 
 -- "__type" is a custom metatable index
