@@ -1,4 +1,4 @@
--- gives a ton of functions built into a struct table returned by returned script.new
+-- Gives a ton of functions built into a struct table returned by returned script.new
 -- This module is only required by the __private module
 -- Other modules use the __private module which contains this module
 
