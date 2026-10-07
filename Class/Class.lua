@@ -64,7 +64,8 @@ __index = {
 
 Class__metatable.Classes = {};
 Class__metatable.ClassInstance = ClassInstance;
-Class__metatable.Struct = ClassInstance.Struct;
+
+Class__metatable.Struct = ClassInstance.Struct; -- only used by this module
 
 
 Class__metatable.EMPTY = table.freeze({__type = false, __newindex = false});
