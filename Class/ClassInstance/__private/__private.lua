@@ -457,7 +457,7 @@ local __private__metatable = {__index = {
 };
 
 function __private__metatable.new(__class, __public)
-	local self = setmetatable({}, __private);
+	local self = setmetatable({}, __private__metatable);
      setmetatable(self, {
 		__class = __class,
 		__public = __public,
