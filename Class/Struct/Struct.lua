@@ -1,4 +1,4 @@
--- This module is used by the Class module and ClassInstance module
+-- This module is used by the the Class module and ClassInstance module
 
 -- Gives a ton of functions built into a struct table returned by returned script.new
 -- This module is only required by the __private module
