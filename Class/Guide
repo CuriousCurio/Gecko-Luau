@@ -1,0 +1,2 @@
+local ClassMain = require(script.Class);
+local Class = ClassMain.new();
