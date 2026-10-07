@@ -8,4 +8,4 @@ Creates classes that preform like C++, C#, Java    By using lua metatables
 
 
 
-I'll add completed documentation later
+I'll complete documentation later
