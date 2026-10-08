@@ -51,7 +51,7 @@ function ClassInstance__metatable.new(class, ...) -- the class variable is the s
 
 	-- Class Matience --
 	class.Instances[self] = true;
-	class.Added(self);
+	class.Added(self); --which fires a RBXScriptSignal
 
 	return self;
 end
