@@ -41,7 +41,7 @@ function ClassInstance__metatable.new(class, ...) -- the class variable is the s
 	P__struct.__.__init(self);
 
 	__private:refresh__virtual();
-	local __init = __private:get__("__init");
+	local __init = __private:get__("__init"); --  returns __private.__struct.__["__init"]
 	if (__init) then __init(self, ...); end
 
 	local __init__newindex_auto = class.__init__newindex_auto;
