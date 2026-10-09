@@ -14,7 +14,6 @@ local RBXScriptSignal__metatable = {
 		Connect = function(self, Connector) -- Connects using a connector function
 			local connection;
 			local Disconnect = function()rawset(self, connection, nil);end
-
 			connection = RBXScriptConnection.new(Connector, Disconnect);
 
 			rawset(self, connection, true);
