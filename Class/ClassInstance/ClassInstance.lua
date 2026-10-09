@@ -31,14 +31,15 @@ local ClassInstance__metatable = {
 ClassInstance__metatable.Struct = Struct;
 
 function ClassInstance__metatable.new(class, ...) -- the class variable is the same as the ClassInstance metatable table
-	local self = setmetatable({}, ClassInstance__metatable);
-	local __private = P__private.new(class, self); --(__class, __public) in the __private file
-	rawset(self, "__private", __private);
+	local Table = setmetatable({}, ClassInstance__metatable);
+
+	local __private = P__private.new(class, Table); --(__class, __public) in the __private file
+	rawset(Table, "__private", __private);
 
 	-- Inserting Initial Libraries --
 	__private.__struct:Insert(P__struct);
 	__private.__struct:Insert(class.__struct);
-	P__struct.__.__init(self);
+	P__struct.__.__init(Table);
 
 	__private:refresh__virtual();
 	local __init = __private:get__("__init"); --  returns __private.__struct.__["__init"]
@@ -50,9 +51,9 @@ function ClassInstance__metatable.new(class, ...) -- the class variable is the s
 	__private:set__('__init__newindex_auto', nil);
 
 	-- Class Matience --
-	class.Instances[self] = true;
-	class.Added(self); --which fires a RBXScriptSignal
+	class.Instances[Table] = true;
+	class.Added(Table); --which fires a RBXScriptSignal
 
-	return self;
+	return Table;
 end
 return ClassInstance__metatable;
