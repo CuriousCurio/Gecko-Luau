@@ -1,6 +1,6 @@
 -- the RBXScriptSignal.new creates a table which holds multiple RBXScriptConnection
 -- This module is only used for the RBXScriptSignal module
--- This module is also used by the :Connect function in the RBXScriptSignal meta table
+-- This module is used by the :Connect function in the RBXScriptSignal metatable
 
 local typeof = require(script.parent.parent.typeof)
 
