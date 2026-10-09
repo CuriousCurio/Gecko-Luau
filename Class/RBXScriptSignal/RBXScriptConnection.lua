@@ -20,7 +20,7 @@ function RBXScriptConnection__metatable.new(Connector:(any), Disconnect:(any))
 	local self;
 self = setmetatable({
 		Connected = true,
-		Disconnec = function(self)
+		Disconnect = function(self)
 			self.Connected = false;
 			Disconnect(self);
 		end,
