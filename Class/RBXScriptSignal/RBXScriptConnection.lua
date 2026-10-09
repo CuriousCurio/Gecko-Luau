@@ -25,7 +25,7 @@ Table = setmetatable({
 			Table.Connected = false;
 			Disconnect(Table); -- uses rawset(self, self, nil) as part of the RBXScriptSignal
 		end,
-		Connector = Connector -- Is not used my the RBXScriptConnection or RBXScriptSignal, but can be used by anything elsebe used as
+		Connector = Connector -- Is only used by this module metatable
 	}, RBXScriptConnection__metatable);
 	return Table;
 end
