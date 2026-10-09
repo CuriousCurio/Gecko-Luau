@@ -18,15 +18,15 @@ local RBXScriptConnection__metatable = {
 
 
 function RBXScriptConnection__metatable.new(Connector:(any), Disconnect:(any))
-	local self; -- just a normal variable
-self = setmetatable({
+	local Table; -- just a normal variable
+Table = setmetatable({
 		Connected = true,
-		Disconnect = function(self)
-			self.Connected = false;
-			Disconnect(self); -- uses rawset(self, self, nil) as part of the RBXScriptSignal
+		Disconnect = function(Table)
+			Table.Connected = false;
+			Disconnect(Table); -- uses rawset(self, self, nil) as part of the RBXScriptSignal
 		end,
 		Connector = Connector
 	}, RBXScriptConnection__metatable);
-	return self;
+	return Table;
 end
 return RBXScriptConnection__metatable;
