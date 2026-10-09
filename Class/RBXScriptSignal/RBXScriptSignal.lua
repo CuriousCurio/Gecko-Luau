@@ -5,7 +5,7 @@ local RBXScriptConnection = require(script.Parent.RBXScriptConnection);
 
 local RBXScriptSignal__metatable = {
 	__index = {
-		Disconnect = function(self)
+		Disconnect = function(self) -- Clears and disconnects the RBXScriptSignal which is a table
 			for connection in pairs(self) do
 				connection:Disconnect();
 			end
