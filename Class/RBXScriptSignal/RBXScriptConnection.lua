@@ -23,7 +23,7 @@ self = setmetatable({
 		Connected = true,
 		Disconnect = function(self)
 			self.Connected = false;
-			Disconnect(self);
+			Disconnect(self); -- uses rawset(self, self, nil) as part of the RBXScriptSignal
 		end,
 		Connector = Connector
 	}, RBXScriptConnection__metatable);
