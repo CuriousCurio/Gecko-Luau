@@ -43,7 +43,7 @@ function ClassInstance__metatable.new(class, ...) -- the class variable is the s
 
 	__private:refresh__virtual();
 	local __init = __private:get__("__init"); --  returns __private.__struct.__["__init"]
-	if (__init) then __init(self, ...); end
+	if (__init) then __init(Table, ...); end
 
 	local __init__newindex_auto = class.__init__newindex_auto;
 	if (__init__newindex_auto == nil or __init__newindex_auto == true) then __private:update_all(); end
